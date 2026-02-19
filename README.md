@@ -40,7 +40,10 @@ All three models performed identically — the data is well-conditioned and regu
 
 - The model explains 63% of price variance; the remaining 37% is driven by factors not in our dataset (photos, condition, local demand)
 - `condition` and `cylinders` were dropped due to ~41% missing data — imputing these could improve accuracy
-- Exploring non-linear models (Random Forest, Gradient Boosting) or target encoding for categorical features could improve R²
+- I removed `model` because it had 29K unique values. A frequency-based encoding or grouping into broader categories could recover some of that signal:
+  - **Frequency:** Use how popular a model is in the dataset as the feature (e.g., f-150 appears 8,009 times → high-demand model)
+  - **Grouping:** Keep the top 20–50 most common models and lump everything else into "other"
+- Exploring non-linear models (Random Forest, Gradient Boosting) could also improve R²
 
 ## Notebook
 
