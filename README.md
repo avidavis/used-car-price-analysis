@@ -43,7 +43,6 @@ All three models performed identically — the data is well-conditioned and regu
 - I removed `model` because it had 29K unique values. A frequency-based encoding or grouping into broader categories could recover some of that signal:
   - **Frequency:** Use how popular a model is in the dataset as the feature (e.g., f-150 appears 8,009 times → high-demand model)
   - **Grouping:** Keep the top 20–50 most common models and lump everything else into "other"
-- Exploring non-linear models (Random Forest, Gradient Boosting) could also improve R²
 
 ## Notebook
 
